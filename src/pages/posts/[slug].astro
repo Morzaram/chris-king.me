@@ -1,0 +1,33 @@
+---
+import BlogHeader from "../../components/BlogHeader.astro";
+import { getPosts } from "../../queries";
+
+
+
+export async function getStaticPaths() {
+  const posts = await getPosts()
+  
+  return posts.map((p)=>{    
+      return {
+        params: {
+          slug: p.slug,
+        },
+        props:{
+          post: p
+        }
+      }
+    })
+  
+}
+const {post} = Astro.props
+---
+
+<body>
+  <BlogHeader />
+  <div class="wrapper">
+    <main class="content" set:html={post.content.rendered}>
+  
+    </main>
+  </div>
+</body>
+
