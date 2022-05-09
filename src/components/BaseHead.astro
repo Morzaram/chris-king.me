@@ -1,5 +1,5 @@
 ---
-import '../styles/blog.css';
+// import '../styles/blog.css';
 
 export interface Props {
 	title: string;
@@ -8,7 +8,7 @@ export interface Props {
 }
 const { title, description, permalink } = Astro.props;
 ---
-
+  <link rel="stylesheet" href="/styles/blog.css" />
 <!-- Global Metadata -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width" />
