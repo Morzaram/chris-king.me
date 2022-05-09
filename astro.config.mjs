@@ -9,5 +9,5 @@ import sitemap from "@astrojs/sitemap";
 // https://astro.build/config
 export default defineConfig({
   site: "https://chris-king.me",
-  integrations: [preact(), svelte(), tailwind(), turbolinks(), sitemap()],
+  integrations: [preact(), svelte(), tailwind(), sitemap()],
 });

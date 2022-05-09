@@ -6,9 +6,6 @@ import { getPosts } from "../../queries";
 
 export async function getStaticPaths() {
   const posts = await getPosts()
-  
-  console.log(posts);
-  
   return posts.map((p)=>{    
       return {
         params: {
