@@ -10,12 +10,16 @@ const getJwt = async () => {
 };
 
 export const getPosts = async () => {
+  console.log("Querying server for posts");
+
   return await fetch(`${baseUrl}/posts&JWT=${await getJwt()}`).then((res) =>
     res.json()
   );
 };
 
 export const getPages = async () => {
+  console.log("Querying server for pages");
+
   return await fetch(`${baseUrl}/pages&JWT=${await getJwt()}`).then((res) =>
     res.json()
   );
