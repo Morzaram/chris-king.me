@@ -1,6 +1,7 @@
 const baseUrl = "http://itschrisking.com/?rest_route=/wp/v2";
-const password = import.meta.env.WP_PASSWORD;
+const password = import.meta.env.WP_PASSWORD || process.env;
 console.log(password);
+console.log("penv", process.env);
 
 const getJwt = async () => {
   return await fetch(
